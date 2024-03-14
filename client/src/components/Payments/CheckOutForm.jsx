@@ -26,10 +26,12 @@ const CheckOutForm = ({amount}) => {
 
     setIsLoading(true);
 
-    const res = await fetch(`http://localhost:3001/payment`, {
+
+    const res = await fetch(`https://speedz.onrender.com/payment`, {
       method: 'POST',
       headers:{
-        'Content-Type':'application/json'
+        'Content-Type':'application/json',
+        'Access-Control-Allow-Origin':'*',
       },
       body: JSON.stringify({ 
         amount: amount,
@@ -61,7 +63,7 @@ const CheckOutForm = ({amount}) => {
       clientSecret,
       elements,
       confirmParams: {
-        return_url: "http://localhost:5173/success",
+        return_url: "https://speedz.vercel.app/success", 
       },
     });
 
