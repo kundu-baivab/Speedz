@@ -63,8 +63,9 @@ const CheckOutForm = ({amount}) => {
       clientSecret,
       elements,
       confirmParams: {
-        return_url: "https://speedz.vercel.app/success", 
+        return_url: "http://localhost:5173/success", 
       },
+      // redirect:'if_required',
     });
 
     if (error.type === "card_error" || error.type === "validation_error") {
@@ -90,6 +91,7 @@ const CheckOutForm = ({amount}) => {
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
         </span>
         </button>
+        {/* {message && <div id="payment-message">{message}</div>} */}
       </form>
     </div>
   );
