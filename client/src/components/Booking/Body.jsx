@@ -190,7 +190,7 @@ const Body = () => {
                         onClick={
                           () => {
                           {
-                            navigate(`https://speedz.vercel.app/payment?amount=${Math.round(carAmt)}`);
+                            navigate(`/payment?amount=${Math.round(carAmt)}`);
                           }
                         }
                         }
