@@ -63,9 +63,8 @@ const CheckOutForm = ({amount}) => {
       clientSecret,
       elements,
       confirmParams: {
-        return_url: "http://localhost:5173/success", 
+        return_url: "https://speedz.vercel.app/success", 
       },
-      // redirect:'if_required',
     });
 
     if (error.type === "card_error" || error.type === "validation_error") {
